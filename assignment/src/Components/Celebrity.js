@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import CelebrityCards from "./CelebrityCards";
 import { data } from "../Utilities/celebrities";
 import "./common.scss";
 
 function Celebrity(props) {
   return (
-    <div className="celebrity">
+    <div className="celebrity mt-2">
       <div className="search_me">
-        <i class="bi bi-search"></i>
+        <i className="bi bi-search"></i>
         <input type="text" placeholder="Search User" className="search_user" />
       </div>
       <CelebrityCards list={data.list} />
