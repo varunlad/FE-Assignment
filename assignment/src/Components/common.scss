@@ -6,7 +6,7 @@
   .search_me {
     display: flex;
     position: relative;
-   
+
     i {
       position: absolute;
       top: 6px;
@@ -28,84 +28,123 @@
       border: 1px solid #aaaaaa;
     }
   }
-  .main_Card_container{
+  .main_Card_container {
     display: flex;
     flex-direction: column;
     max-width: 500px;
     width: 100%;
-    .my_card{
+    .my_card {
       display: flex;
-     flex-direction: column;
+      flex-direction: column;
       padding: 10px 15px;
       border: 1px solid #aaaaaa;
       border-radius: 6px;
       max-width: 500px;
       width: 100%;
       margin-bottom: 20px;
-      .my_card_head{
+      .my_card_head {
         display: flex;
         align-items: center;
         justify-content: space-between;
         cursor: pointer;
+        animation: fadeIn 500ms ease-in-out;
       }
-      .sec_1{
+      .sec_1 {
         display: flex;
         align-items: center;
         cursor: pointer;
-        img{
+        img {
           border-radius: 50%;
           margin-right: 20px;
+          transition: 0.3s ease-in-out;
         }
-        
       }
-      .content_sec_1{
+      .content_sec_1 {
         display: flex;
         margin-top: 20px;
         width: 100%;
-        .sec_1_content{
+        animation: fadeIn 500ms ease-in-out;
+        .sec_1_content {
           display: flex;
           flex-direction: column;
           width: 33%;
         }
-        p{
+        p {
           color: #aaaaaa;
           margin-bottom: 0;
         }
-        .value{
+        .value {
           color: black;
         }
       }
-      .edit_delete{
+      .edit_delete {
         display: flex;
         align-items: center;
         justify-content: end;
         margin-top: 10px;
-        i{
+        i {
           cursor: pointer;
         }
-      }
+        .delete_me {
+          position: relative;
+          .delete_Popup {
+            animation: fadeIn 500ms ease-in-out;
+            position: absolute;
+            border: 1px solid #aaaaaa;
+            background-color: #ffffff;
+            width: 400px;
+            right: 0;
+            top: -95px;
+            padding: 10px;
+            border-radius: 8px;
+            button{
+              background-color: #f06712;
+              color: #ffffff;
+              border-radius: 5px;
+              outline:none;
+              padding: 3px 20px;
+              border: 1px solid #f06712;
+            }
+            .cancel{
+              background-color: #ffffff;
+              color: #000000;
+              border: 1px solid #aaaaaa;
 
+            }
+          }
+        }
+      }
     }
   }
 }
 @media screen and (max-width: 991px) {
-  .search_me{
+  .search_me {
     width: 100%;
-    input[type='text']{
-       min-width: fit-content !important;
+    input[type="text"] {
+      min-width: fit-content !important;
     }
   }
-  .main_Card_container{
+  .main_Card_container {
     max-width: fit-content !important;
-  .my_card{
-    min-width: fit-content !important;
+    .my_card {
+      min-width: fit-content !important;
+    }
   }
-}
-  .content_sec_1{
-   
-    .sec_1_content{
+  .content_sec_1 {
+    .sec_1_content {
       width: fit-content !important;
       margin-right: 25px !important;
     }
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
