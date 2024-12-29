@@ -46,17 +46,31 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        cursor: pointer;
         animation: fadeIn 500ms ease-in-out;
+      }
+      i{
+        cursor: pointer;
       }
       .sec_1 {
         display: flex;
         align-items: center;
-        cursor: pointer;
         img {
           border-radius: 50%;
           margin-right: 20px;
           transition: 0.3s ease-in-out;
+        }
+       
+        .head_edit{
+          outline: none;
+           padding: 5px 0px 5px 5px;
+          border: 1px solid #aaaaaa;
+          border-radius: 4px;
+          font-size: 24px;
+          font-weight: 600;
+          width: 215px;
+        }:focus-visible{
+          outline: none;
+          border: 1px solid #aaaaaa;
         }
       }
       .content_sec_1 {
@@ -67,7 +81,51 @@
         .sec_1_content {
           display: flex;
           flex-direction: column;
-          width: 33%;
+          width: 30%;
+          margin-right: 15px;
+          .outer_age{
+            display: flex;
+             padding: 5px 0px 5px 5px;
+            border: 1px solid #aaaaaa;
+            border-radius: 8px;
+            margin-top: 5px;
+            height: 34px;
+            align-items: center;
+          }
+          
+          input[type='number']{
+            width: 45px;
+            outline: none;
+             padding: 5px 0px 5px 5px;
+            border: 1px solid #ffffff;
+            border-radius: 8px;
+            background-color: transparent;
+          }:focus-visible{
+            outline: none;
+            border: 1px solid #ffffff;
+          }
+          input[type='text']{
+            outline: none;
+             padding: 5px 0px 5px 5px;
+            border: 1px solid #aaaaaa;
+            border-radius: 8px;
+            margin-top: 5px;
+          }:focus-visible{
+            outline: none;
+            border: 1px solid #aaaaaa;
+          }
+          select{
+            outline: none;
+             padding: 5px 0px 5px 5px;
+            border: 1px solid #aaaaaa;
+            border-radius: 8px;
+            margin-top: 5px;
+          }:focus-visible{
+            outline: none;
+            border: 1px solid #aaaaaa;
+          }
+         
+          
         }
         p {
           color: #aaaaaa;
@@ -75,6 +133,16 @@
         }
         .value {
           color: black;
+        }
+        .my_textArea{
+          resize: none;outline: none;
+           padding: 5px 0px 5px 5px;
+          border: 1px solid #aaaaaa;
+          border-radius: 8px;
+          margin-top: 5px;
+        }:focus-visible{
+          outline: none;
+          border: 1px solid #aaaaaa;
         }
       }
       .edit_delete {
@@ -124,6 +192,13 @@
       min-width: fit-content !important;
     }
   }
+  .delete_Popup{
+    width: fit-content !important;
+    p{
+      white-space: nowrap;
+      margin-right: 15px;
+    }
+  }
   .main_Card_container {
     max-width: fit-content !important;
     .my_card {
@@ -134,6 +209,13 @@
     .sec_1_content {
       width: fit-content !important;
       margin-right: 25px !important;
+      input[type='text']{
+        width: 90px !important;
+      }
+      select{
+        width: 90px !important;
+      }
+
     }
   }
 }
